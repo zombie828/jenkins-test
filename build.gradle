@@ -4,8 +4,9 @@ plugins {
     id 'java'
 }
 
+archivesBaseName = 'springboot-deploy'
 group = 'com.example'
-version = '0.0.2'
+version = '0.0.3'
 sourceCompatibility = '1.8'
 
 configurations {
