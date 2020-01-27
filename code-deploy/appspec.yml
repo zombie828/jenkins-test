@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ec2-user/server
+    destination: /home/ec2-user/daily-mission/deploy
 
 permissions:
   - object: /
@@ -12,15 +12,7 @@ permissions:
     group: ec2-user
 
 hooks:
-  ApplicationStop:
-    - location: scripts/server_stop.sh
-      timeout: 20
-      runas: ec2-user
   ApplicationStart:
-    - location: scripts/server_start.sh
-      timeout: 20
-      runas: ec2-user
-  ValidateService:
-    - location: scripts/server_validate.sh
+    - location: deploy.sh
       timeout: 60
       runas: ec2-user
