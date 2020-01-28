@@ -4,7 +4,8 @@ plugins {
     id 'java'
 }
 
-
+archivesBaseName = 'springboot-deploy'
+version = '0.0.4'
 group = 'com.example'
 sourceCompatibility = '1.8'
 
@@ -34,10 +35,4 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-bootJar{
-    archivesBaseName = 'springboot-deploy'
-    archiveFileName = ".jar"
-    archiveVersion = "0.0.0"
 }
